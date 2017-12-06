@@ -4,9 +4,25 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Driver {
 	public static String readFile(String input) {
+		try {
+			FileReader inFile = new FileReader(Paths.get("data/" + input).toAbsolutePath().normalize().toString());
+			BufferedReader inStream = new BufferedReader(inFile);
+			String out= inStream.readLine();
+
+			inStream.close();
+			return out;
+		} catch (IOException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	public static String readMultiLineFile(String input) {
 		try {
 			FileReader inFile = new FileReader(Paths.get("data/" + input).toAbsolutePath().normalize().toString());
 			BufferedReader inStream = new BufferedReader(inFile);
@@ -14,9 +30,10 @@ public class Driver {
 			String out= "";
 
 			while ((inString = inStream.readLine()) != null) {
-				out+=inString;
+				
+				out += inString + ";";
 			}
-
+			out.substring(0, out.length() - 1);
 			inStream.close();
 			return out;
 		} catch (IOException e) {
@@ -35,6 +52,7 @@ public class Driver {
 		Day3.day3Part2(289326);
 		Day4.day4();
 		Day4.day4Part2();
+		Day5.day5(new ArrayList<String>(Arrays.asList(readMultiLineFile("input5.txt").split(";"))));
 	}
 
 }

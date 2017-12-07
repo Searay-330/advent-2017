@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Driver {
 	public static String readFile(String input) {
@@ -53,6 +55,7 @@ public class Driver {
 		Day4.day4();
 		Day4.day4Part2();
 		Day5.day5(new ArrayList<String>(Arrays.asList(readMultiLineFile("input5.txt").split(";"))));
+		Day5.day5Part2(new ArrayList<String>(Arrays.asList(readMultiLineFile("input5.txt").split(";"))));
 	}
 
 }

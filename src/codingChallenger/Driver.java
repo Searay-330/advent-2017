@@ -43,6 +43,7 @@ public class Driver {
 			return null;
 		}
 	}
+	
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
@@ -56,6 +57,8 @@ public class Driver {
 		Day4.day4Part2();
 		Day5.day5(new ArrayList<String>(Arrays.asList(readMultiLineFile("input5.txt").split(";"))));
 		Day5.day5Part2(new ArrayList<String>(Arrays.asList(readMultiLineFile("input5.txt").split(";"))));
+		Day6.day6("input6.txt");
+		Day6.day6Part2("input6.txt");
 	}
 
 }

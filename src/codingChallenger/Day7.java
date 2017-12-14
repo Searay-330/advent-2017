@@ -35,7 +35,7 @@ public abstract class Day7 {
 		for (String string : bads) {
 			nodes.remove(string);
 		}
-//		System.out.println(nodes.get(0));
+		System.out.println(nodes.get(0));
 		return nodes.get(0);
 	}
 
@@ -63,7 +63,6 @@ public abstract class Day7 {
 			e.printStackTrace();
 
 		}
-//		System.out.println(calcweight(graph.get("tvoptyn").get(0), nodes, graph));
 	
 		System.out.println(solve(day7(inputFile), nodes, graph));
 	}

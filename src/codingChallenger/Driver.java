@@ -59,6 +59,7 @@ public class Driver {
 		Day6.day6Part2("input6.txt");
 		Day7.day7("input7.txt");
 		Day7.day7Part2("input7.txt");
+		Day8.day8(readMultiLineFile("input8.txt"));
 	}
 
 }
